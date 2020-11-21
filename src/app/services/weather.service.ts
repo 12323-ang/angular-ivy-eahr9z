@@ -5,12 +5,12 @@ import { Observable } from "rxjs";
 @Injectable()
 export class WeatherService {
   weatherData: any;
-  apikey = "b78a0580701ddf27a8f5fb3ef9a0b85a";
+  apikey = "b1b15e88fa797225412429c1c50c122a1";
   baseUrl = "http://api.openweathermap.org/data/2.5/weather?q=";
 
   constructor(private http: HttpClient) {}
 
   getWeatherByCity(city: string): Observable<any> {
-    return this.http.get(this.baseUrl + city + "&appid=" + this.apikey);
+    return this.http.get(this.baseUrl + city + "id=524901&appid=" + this.apikey);
   }
 }
